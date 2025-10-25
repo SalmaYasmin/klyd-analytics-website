@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klyd Analytics - AI-Powered Ad Analytics Platform</title>
+    <meta name="description" content="Klyd Analytics is an AI-powered Ad Analytics SaaS platform that helps businesses optimize ad spend, track ROI across all channels, and maximize marketing performance.">
+    <meta name="keywords" content="ad analytics, ROI optimization, marketing analytics, AI advertising, digital marketing">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <h2>Klyd Analytics</h2>
+            </div>
+            <div class="nav-menu" id="nav-menu">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#services" class="nav-link">Services</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+                <button class="theme-toggle" id="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <div class="nav-toggle" id="nav-toggle">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Maximize Your ROI with <span class="gradient-text">Klyd Analytics</span></h1>
+                <p class="hero-subtitle">The all-in-one AI Ad Analytics Suite for marketers, solopreneurs, and small businesses.</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary">Start Free Trial</button>
+                    <button class="btn btn-secondary" onclick="document.getElementById('demo').scrollIntoView({behavior: 'smooth'})">
+                        <i class="fas fa-play"></i>
+                        Watch Demo
+                    </button>
+                </div>
+            </div>
+            <div class="hero-demo">
+                <div class="demo-container">
+                    <div class="demo-screen">
+                        <div class="demo-header">
+                            <div class="demo-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                        </div>
+                        <div class="demo-content">
+                            <div class="demo-chart">
+                                <div class="chart-bar" style="height: 60%"></div>
+                                <div class="chart-bar" style="height: 80%"></div>
+                                <div class="chart-bar" style="height: 45%"></div>
+                                <div class="chart-bar" style="height: 90%"></div>
+                                <div class="chart-bar" style="height: 70%"></div>
+                            </div>
+                            <div class="demo-metrics">
+                                <div class="metric">
+                                    <span class="metric-value">+127%</span>
+                                    <span class="metric-label">ROI Increase</span>
+                                </div>
+                                <div class="metric">
+                                    <span class="metric-value">$2.4M</span>
+                                    <span class="metric-label">Revenue Generated</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Klyd Analytics</h2>
+                <p class="section-subtitle">Simplifying ad performance tracking with the power of AI</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Klyd Analytics is a cutting-edge SaaS platform that revolutionizes how businesses track, analyze, and optimize their advertising performance. Our AI-powered solution provides comprehensive insights across all your marketing channels, helping you make data-driven decisions that maximize ROI.</p>
+                    <div class="benefits-grid">
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <h3>Data Transparency</h3>
+                            <p>Complete visibility into your ad performance with real-time analytics and detailed reporting.</p>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <h3>AI Automation</h3>
+                            <p>Intelligent automation that optimizes your campaigns and reduces manual workload.</p>
+                        </div>
+                        <div class="benefit-item">
+                            <div class="benefit-icon">
+                                <i class="fas fa-dollar-sign"></i>
+                            </div>
+                            <h3>Cost Efficiency</h3>
+                            <p>Reduce wasted ad spend and increase conversion rates with smart budget allocation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-subtitle">Comprehensive solutions to maximize your marketing ROI</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Comprehensive Digital Marketing Solutions</h3>
+                    <p>Tailored strategies to maximize your marketing ROI across all digital channels.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3>Cross-Platform ROI Analysis</h3>
+                    <p>Discover where your budget performs best across Google, Meta, LinkedIn, and TikTok Ads.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Budget Recommendations</h3>
+                    <p>Actionable AI insights to help optimize spend and increase conversions.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-tachometer-alt"></i>
+                    </div>
+                    <h3>Performance Tracking & Reporting</h3>
+                    <p>Real-time dashboards and easy-to-understand reports for better decision making.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Consultation & Support</h3>
+                    <p>Expert team guidance at every step of your marketing journey.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3>Continuous Optimization Strategies</h3>
+                    <p>Adaptive algorithms that refine ad targeting and engagement over time.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Demo Section -->
+    <section class="video-demo" id="demo">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">See Klyd in Action</h2>
+                <p class="section-subtitle">Watch how our platform transforms your ad analytics</p>
+            </div>
+            <div class="video-container">
+                <div class="video-wrapper">
+                    <video 
+                        id="demo-video" 
+                        class="demo-video" 
+                        controls 
+                        preload="metadata"
+                        playsinline
+                    >
+                        <source src="demo-video.mp4" type="video/mp4">
+                        <source src="demo-video.mov" type="video/quicktime">
+                        <source src="demo-video.webm" type="video/webm">
+                        <p>Your browser doesn't support HTML5 video. 
+                           <a href="demo-video.mp4">Download the video</a> instead.</p>
+                    </video>
+                    <div class="video-overlay" id="video-overlay">
+                        <div class="play-button" id="play-button">
+                            <i class="fas fa-play"></i>
+                        </div>
+                        <p>Watch Klyd Analytics in Action</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Choose Your Plan</h2>
+                <p class="section-subtitle">Flexible pricing options to fit your business needs</p>
+            </div>
+            <div class="pricing-toggle">
+                <span class="toggle-label">Monthly</span>
+                <label class="toggle-switch">
+                    <input type="checkbox" id="pricing-toggle">
+                    <span class="toggle-slider"></span>
+                </label>
+                <span class="toggle-label">Yearly <span class="discount">Save 20%</span></span>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Starter</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount" data-monthly="39" data-yearly="31.20">39</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Basic analytics & insights</li>
+                            <li><i class="fas fa-check"></i> Up to 5 campaigns</li>
+                            <li><i class="fas fa-check"></i> Monthly reports</li>
+                            <li><i class="fas fa-check"></i> Email support</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-outline">Get Started</button>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>Pro</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount" data-monthly="99" data-yearly="79">99</span>
+                            <span class="period">/month</span>
+                        </div>
+                    </div>
+                    <div class="pricing-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Full suite with automation</li>
+                            <li><i class="fas fa-check"></i> Unlimited campaigns</li>
+                            <li><i class="fas fa-check"></i> Real-time ROI reports</li>
+                            <li><i class="fas fa-check"></i> Premium support</li>
+                            <li><i class="fas fa-check"></i> AI optimization</li>
+                        </ul>
+                    </div>
+                    <button class="btn btn-primary">Get Started</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section - HIDDEN (Enable in future by removing style="display: none;") -->
+    <section class="testimonials" id="testimonials" style="display: none;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">What Our Customers Say</h2>
+                <p class="section-subtitle">Real results from real businesses</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Klyd Analytics helped us increase our ROI by 127% in just 3 months. The AI insights are game-changing!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4>Sarah Johnson</h4>
+                            <span>Marketing Director, TechCorp</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Finally, a platform that makes ad management simple. Our team saves 10+ hours per week with Klyd."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4>Mike Chen</h4>
+                            <span>CEO, StartupXYZ</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"The cross-platform analysis feature is incredible. We discovered our best-performing channels instantly."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-info">
+                            <h4>Emily Rodriguez</h4>
+                            <span>Founder, GrowthCo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Everything you need to know about Klyd Analytics</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How quickly can I see results with Klyd Analytics?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Most customers see improved performance within the first week of implementation. Our AI algorithms start optimizing your campaigns immediately, and you'll typically see significant ROI improvements within 30 days.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What platforms does Klyd integrate with?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Klyd integrates with all major advertising platforms including Google Ads, Facebook Ads, LinkedIn Ads, TikTok Ads, Twitter Ads, and many more. We also support direct API integrations with your existing marketing tools.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Is there a setup fee or long-term contract?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>No setup fees and no long-term contracts. You can cancel anytime. We offer a 14-day free trial so you can test our platform risk-free before committing to a paid plan.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How secure is my advertising data?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We use enterprise-grade security with 256-bit SSL encryption, SOC 2 compliance, and regular security audits. Your data is never shared with third parties and is stored in secure, encrypted databases.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do you offer custom enterprise solutions?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Yes! We offer custom enterprise plans with dedicated account managers, custom integrations, advanced reporting, and priority support. Contact our sales team to discuss your specific needs.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Stop guessing your ad performance. Start optimizing with Klyd today.</h2>
+                <div class="cta-buttons">
+                    <button class="btn btn-primary btn-large">Start Free Trial</button>
+                    <button class="btn btn-secondary btn-large" onclick="document.getElementById('pricing').scrollIntoView({behavior: 'smooth'})">View Pricing</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Klyd Analytics</h3>
+                    <p>AI-powered ad analytics platform that helps businesses maximize ROI from their marketing spend.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Product</h4>
+                    <ul>
+                        <li><a href="#features">Features</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
+                        <li><a href="#demo">Demo</a></li>
+                        <li><a href="#integrations">Integrations</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#careers">Careers</a></li>
+                        <li><a href="#blog">Blog</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#help">Help Center</a></li>
+                        <li><a href="#docs">Documentation</a></li>
+                        <li><a href="#status">Status</a></li>
+                        <li><a href="#privacy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Klyd Analytics. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>

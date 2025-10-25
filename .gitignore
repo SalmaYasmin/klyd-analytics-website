@@ -105,3 +105,4 @@ lighthouse-report.html
 # Temporary files
 tmp/
 temp/
+.vercel

@@ -1,18 +1,5 @@
 {
   "version": 2,
-  "name": "klyd-analytics-website",
-  "builds": [
-    {
-      "src": "index.html",
-      "use": "@vercel/static"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/index.html"
-    }
-  ],
   "headers": [
     {
       "source": "/(.*)",
@@ -53,10 +40,5 @@
         }
       ]
     }
-  ],
-  "functions": {
-    "api/contact.js": {
-      "runtime": "nodejs18.x"
-    }
-  }
+  ]
 }

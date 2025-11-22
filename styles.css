@@ -1009,7 +1009,7 @@ input:checked + .toggle-slider:before {
 }
 
 .faq-item.active .faq-answer {
-    max-height: 200px;
+    max-height: 500px;
 }
 
 .faq-answer p {

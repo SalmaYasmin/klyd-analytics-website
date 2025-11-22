@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize all functionality
     initNavigation();
     initThemeToggle();
-    initPricingToggle();
+    // initPricingToggle(); // Disabled - pricing toggle commented out
     initFAQ();
     initScrollAnimations();
     initMobileMenu();
@@ -44,8 +44,8 @@ function initThemeToggle() {
     const themeToggle = document.getElementById('theme-toggle');
     const body = document.body;
     
-    // Check for saved theme preference or default to light mode
-    const currentTheme = localStorage.getItem('theme') || 'light';
+    // Check for saved theme preference or default to dark mode
+    const currentTheme = localStorage.getItem('theme') || 'dark';
     body.setAttribute('data-theme', currentTheme);
     updateThemeIcon(currentTheme);
 
@@ -77,45 +77,58 @@ function updateThemeIcon(theme) {
 }
 
 // Pricing Toggle Functionality
-function initPricingToggle() {
-    const pricingToggle = document.getElementById('pricing-toggle');
-    const monthlyPrices = document.querySelectorAll('[data-monthly]');
-    const yearlyPrices = document.querySelectorAll('[data-yearly]');
+// function initPricingToggle() {
+//     // const pricingToggle = document.getElementById('pricing-toggle');
+//     const monthlyPrices = document.querySelectorAll('[data-monthly]');
+//     const yearlyPrices = document.querySelectorAll('[data-yearly]');
     
-    if (!pricingToggle) return;
+//     if (!pricingToggle) return;
     
-    pricingToggle.addEventListener('change', () => {
-        const isYearly = pricingToggle.checked;
+//     pricingToggle.addEventListener('change', () => {
+//         const isYearly = pricingToggle.checked;
         
-        monthlyPrices.forEach(element => {
-            const monthlyPrice = element.getAttribute('data-monthly');
-            const yearlyPrice = element.getAttribute('data-yearly');
+//         monthlyPrices.forEach(element => {
+//             const monthlyPrice = element.getAttribute('data-monthly');
+//             const yearlyPrice = element.getAttribute('data-yearly');
             
-            if (isYearly) {
-                element.textContent = yearlyPrice;
-            } else {
-                element.textContent = monthlyPrice;
-            }
-        });
+//             if (isYearly) {
+//                 element.textContent = yearlyPrice;
+//             } else {
+//                 element.textContent = monthlyPrice;
+//             }
+//         });
         
-        // Add animation effect
-        document.querySelectorAll('.pricing-card').forEach(card => {
-            card.style.transform = 'scale(1.02)';
-            setTimeout(() => {
-                card.style.transform = '';
-            }, 200);
-        });
-    });
-}
+//         // Add animation effect
+//         document.querySelectorAll('.pricing-card').forEach(card => {
+//             card.style.transform = 'scale(1.02)';
+//             setTimeout(() => {
+//                 card.style.transform = '';
+//             }, 200);
+//         });
+//     });
+// }
 
 // FAQ Functionality
 function initFAQ() {
     const faqItems = document.querySelectorAll('.faq-item');
     
+    if (faqItems.length === 0) {
+        console.warn('No FAQ items found');
+        return;
+    }
+    
     faqItems.forEach(item => {
         const question = item.querySelector('.faq-question');
         
-        question.addEventListener('click', () => {
+        if (!question) {
+            console.warn('FAQ question not found in item');
+            return;
+        }
+        
+        question.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            
             const isActive = item.classList.contains('active');
             
             // Close all other FAQ items
@@ -132,7 +145,12 @@ function initFAQ() {
                 item.classList.add('active');
             }
         });
+        
+        // Make sure question is clickable
+        question.style.cursor = 'pointer';
     });
+    
+    console.log(`FAQ initialized: ${faqItems.length} items found`);
 }
 
 

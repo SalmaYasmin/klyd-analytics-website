@@ -560,6 +560,45 @@ function manageFocus() {
 // Initialize focus management
 manageFocus();
 
+// Reveal Support Email Function
+function revealSupportEmail() {
+    const supportEmail = 'support@klyd.it.com';
+    
+    // Try to copy to clipboard
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(supportEmail).then(() => {
+            // Show notification that email was copied
+            if (typeof showNotification === 'function') {
+                showNotification(`Support email copied to clipboard: ${supportEmail}`, 'success');
+            } else {
+                alert(`Support Email: ${supportEmail}\n\n(Copied to clipboard)`);
+            }
+        }).catch(() => {
+            // If clipboard fails, just show the email
+            if (typeof showNotification === 'function') {
+                showNotification(`Support Email: ${supportEmail}`, 'info');
+            } else {
+                alert(`Support Email: ${supportEmail}`);
+            }
+        });
+    } else {
+        // Fallback if clipboard API not available
+        if (typeof showNotification === 'function') {
+            showNotification(`Support Email: ${supportEmail}`, 'info');
+        } else {
+            alert(`Support Email: ${supportEmail}`);
+        }
+    }
+    
+    // Track the click event
+    if (typeof gtag !== 'undefined') {
+        gtag('event', 'click', {
+            event_category: 'Footer',
+            event_label: 'Support Email Revealed'
+        });
+    }
+}
+
 // Add performance monitoring
 function monitorPerformance() {
     if ('performance' in window) {
